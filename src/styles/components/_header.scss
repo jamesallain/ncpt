@@ -1,0 +1,51 @@
+@import "../elements/variables";
+
+.header {
+
+/* ------------------------- NAV ------------------------------------------- */
+
+  .navbar-inverse {
+    background-color: darken($brand-secondary, 10%);
+
+    .navbar-nav {
+      margin: 0;
+
+      a {
+        padding: 30px;
+        min-width: 140px;
+        text-align: center;
+
+        &.active,
+        &.active:focus,
+        &.active:hover {
+          background-color: $navbar-inverse-link-active-bg;
+        }
+      }
+    }
+  }
+
+  /* ----------------------- LOGO ------------------------------------------ */
+
+  .logo {
+    margin-top: -20px;
+  }
+}
+
+/* ------------------------- PAGE HEADER ----------------------------------- */
+
+.page-header {
+  background-color: $white;
+  margin: -20px -9999rem 20px -9999rem;
+  padding: 0.25rem 9999rem;
+
+  @include respond-to(mobile) { text-align: center; }
+  @include respond-to(tablet) {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .page-header-text {
+    font-size: 4.8em;
+    font-weight: 100;
+  }
+}

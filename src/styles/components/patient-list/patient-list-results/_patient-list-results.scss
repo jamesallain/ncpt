@@ -1,0 +1,26 @@
+@import "../../../elements/variables";
+
+.patient-list-results {
+  @include respond-to(tablet) {
+    position: absolute;
+    right: -5px;
+  }
+
+  .patient-panel {
+    min-height: 800px;
+
+    .patient-list-results-buttons {
+      display: inline-block;
+      height: 22px;
+    }
+
+    .pagination-centered {
+      text-align: center;
+
+      .pagination > li > a {
+        border-radius: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

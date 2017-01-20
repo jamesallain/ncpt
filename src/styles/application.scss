@@ -1,0 +1,138 @@
+/* ------------------------- IMPORT VARIABLES ------------------------------ */
+
+@import "elements/variables";
+
+/* ------------------------- IMPORT 3RD PARTY VENDORS ---------------------- */
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+/* ------------------------- IMPORT CUSTOM FONTS --------------------------- */
+
+@import "vendors/fontcustom";
+
+/* ------------------------- IMPORT CUSTOM SCSS ---------------------------- */
+
+@import "components/footer";
+@import "components/header";
+@import "components/patient-list/patient-list-results/patient-list-results";
+@import "components/patient-list/patient-list-results/patient-list-results-item";
+@import "components/patient-list/patient-list-selectors/filter-selector/huddle-filter-selector/huddle-filter-date-selector";
+@import "components/patient-list/patient-list-selectors/filter-selector/huddle-filter-selector/huddle-filter-selector";
+@import "components/patient-list/patient-list-selectors/filter-selector/population-filter-selector";
+@import "components/patient-list/patient-list-selectors/filter-selector/risk-assessment-selector";
+@import "components/patient-list/patient-list-selectors/filter-selector/sort-by-selector";
+@import "components/patient-list/patient-list-selectors/patient-list-selectors";
+@import "components/patient-view/patient-view";
+@import "components/patient-view/patient-view-banner/patient-view-banner";
+@import "components/patient-view/patient-view-banner/patient-view-banner-summary";
+@import "components/patient-view/patient-view-stats/patient-view-stats-conditions";
+@import "components/patient-view/patient-view-stats/patient-view-stats-huddles";
+@import "components/patient-view/patient-view-stats/patient-view-stats-medications";
+@import "components/patient-view/patient-view-banner-risk-chart";
+@import "elements/animation";
+@import "elements/buttons";
+@import "elements/forms";
+@import "elements/icons";
+@import "elements/modals";
+@import "elements/panels";
+@import "elements/pikaday";
+@import "elements/print";
+@import "elements/search";
+@import "elements/tables";
+@import "elements/tooltip";
+@import "vendors/bootstrap";
+
+/* ------------------------- DOM ------------------------------------------- */
+
+html {
+  position: relative;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  padding-bottom: 2em;
+  overflow-x: hidden;
+}
+
+input,
+textarea {
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 4.8em;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+ul {
+  text-decoration: none;
+}
+
+/* ------------------------- OTHER ----------------------------------------- */
+
+#ember-fhir {
+  overflow: hidden;
+}
+
+.spin-box {
+  height: 200px;
+  position: relative;
+}
+
+.sub-text {
+  color: lighten($brand-secondary, 40%);
+  font-style: italic;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+svg {
+  fill: $brand-primary;
+  shape-rendering: geometricPrecision;
+
+  .event {
+    stroke: white;
+  }
+}
+
+.active {
+  stroke: black;
+  stroke-width: 4px;
+}
+
+.background {
+  fill: $gray-lighter;
+}
+
+.svg-risk {
+  .bar {
+    background-color: $brand-primary;
+  }
+}
+
+.row {
+  margin: 0;
+}
+
+.col-reset {
+  margin: 0;
+  padding: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.debug {
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+}

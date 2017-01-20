@@ -1,0 +1,156 @@
+@import "variables";
+
+/* ------------------------- COLLAPSIBLE PANEL ----------------------------- */
+
+.collapsible-panel {
+  border: 0;
+  margin: 0 0 2px 0;
+  box-shadow: none;
+
+  .panel-heading {
+    background-color: $navbar-inverse-bg;
+    border-radius: 0;
+    color: $white;
+    height: 48px;
+    line-height: 2em;
+    padding: 0;
+
+    .panel-title {
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    a {
+      color: $white;
+      cursor: pointer;
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+
+      i {
+        
+
+        &.collapsible-chevron {
+          font-size: 1.3em;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+
+  .panel-body {
+    border-left: 10px solid $navbar-inverse-bg;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.collapsible-panel.is-nested {
+  .panel-heading {
+    background-color: $navbar-inverse-link-active-bg;
+  }
+
+  .panel-body {
+    border-left: none;
+  }
+}
+
+/* ------------------------- CONTENT PANELS -------------------------------- */
+
+.panel {
+  margin: 0;
+
+  .panel-heading {
+    padding: 0;
+    margin: 0;
+
+    .panel-title, .collapse-panel-title {
+      font-size: 18px;
+      line-height: 18px;
+      padding: 15px;
+    }
+
+    .collapse-panel-title {
+      color: #fff;
+      background-color: $navbar-inverse-bg;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .collapsed {
+        .fa-chevron-down {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+
+  .panel-heading-alt {
+    background-color: $brand-primary;
+    border-bottom: 1px solid $body-bg;
+    padding: 0;
+    margin: 0;
+
+    .panel-title {
+      color: #fff;
+      font-size: 14px;
+      line-height: 14px;
+      padding: 10px 5px;
+    }
+  }
+
+  .panel-body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.has-nested-panel {
+  & > .panel-heading {
+    border-bottom: 0;
+  }
+
+  & > .panel-body {
+    border-left: 10px solid $navbar-inverse-bg;
+  }
+
+  .panel {
+    border: 0;
+
+    .panel-heading {
+      border-bottom: 1px solid $navbar-inverse-bg;
+
+      .collapse-panel-title {
+        background-color: $navbar-inverse-link-active-bg;
+      }
+    }
+  }
+}
+
+// ------------------------- PATIENT PANELS -------------------------------- //
+
+.patient-panel {
+  .patient-panel-header {
+    border-radius: 0;
+    height: 48px;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: $navbar-inverse-bg;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .patient-panel-body {
+    background-color: #fff;
+  }
+}
