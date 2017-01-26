@@ -21,7 +21,7 @@ export default class PatientViewStatsMedications extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.patient != this.props.patient) {
-      let medications = this.getActiveMedications(nextProps.patient);
+      let medications = this.getActiveMedications(nextProps.patient);  
       let uniqueMedicationsText = _.uniq(medications.map((medication) => medication.medicationCodeableConcept.text));
       this.setState({ medications, uniqueMedicationsText, uniqueMedicationsTextCount: uniqueMedicationsText.length });
     }

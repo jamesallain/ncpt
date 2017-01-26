@@ -47,7 +47,7 @@ export default class AddToHuddleModal extends Component {
   selectHuddleGroup(event) {
     let selectedHuddleGroupId = event.target.value;
     let selectedHuddleGroup = this.props.huddles.find((huddleGroup) => huddleGroup.id === selectedHuddleGroupId);
-
+    console.log("hi")
     this.setState({
       selectedHuddleGroupId,
       selectedHuddleGroup,

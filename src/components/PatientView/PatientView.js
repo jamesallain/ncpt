@@ -11,6 +11,9 @@ import huddleProps from '../../prop-types/huddle';
 import riskAssessmentTypeProps from '../../prop-types/risk_assessment_type';
 import riskAssessmentProps from '../../prop-types/risk_assessment';
 
+import NCPT from './NCPT/NCPT';
+
+
 export default class PatientView extends Component {
   render() {
     return (
@@ -42,8 +45,10 @@ export default class PatientView extends Component {
                                   selectRiskAssessment={this.props.selectRiskAssessment}
                                   addPatientToHuddle={this.props.addPatientToHuddle} />
               </div>
-              <div className="patient-panel-body-section col-xs-9">
-                <h2>hello there</h2>
+
+              <div className="assessment col-xs-9">
+                <NCPT  />
+
               </div>
 
             </div>

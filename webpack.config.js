@@ -19,6 +19,10 @@ module.exports = {
     filename: "/assets/bundle.js"
   },
 
+  loaders: [
+    { test: /\.json$/, loader: 'json' },
+  ],
+
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
