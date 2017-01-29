@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import ncptData from './ncpt_data.js';
 import { Tabs, Tab } from 'react-bootstrap';
 
-import Assessment from './Assessment'
+import AssessmentTable from './Assessment/AssessmentTable'
+import Diagnosis from './Diagnosis'
+import Intervention from './Intervention'
+import Monitoring from './Monitoring'
+
 
 export default class ControlledTabs extends Component {
     constructor(){
@@ -14,26 +18,53 @@ export default class ControlledTabs extends Component {
           filterIntervention: 0,
           filterMonitoring: 0,
           selectANDUID:''
+          
         };
     }
 
     renderForms(){
     const selectedDomain = this.state.selectedDomain;
+
+    console.log(patientData)
+
       switch(selectedDomain){
         case 1:
             return (
-              <Assessment 
+              <AssessmentTable 
                 filterAssessment = { this.state.filterAssessment }
                 ncptData = { ncptData }
                 selectedDomain = { this.state.selectedDomain }
                 updateANDUID={this.updateANDUID.bind(this)}
-
+                patientData = {patientData}
               />
             )
         case 2:
-            return <p>Hi 2</p>
+            return (
+              <Diagnosis 
+                filterAssessment = { this.state.filterAssessment }
+                ncptData = { ncptData }
+                selectedDomain = { this.state.selectedDomain }
+                updateANDUID={this.updateANDUID.bind(this)}
+              />
+            )
         case 3:
-            return <p>Hi 3</p>
+            return (
+              <Intervention 
+                filterAssessment = { this.state.filterAssessment }
+                ncptData = { ncptData }
+                selectedDomain = { this.state.selectedDomain }
+                updateANDUID={this.updateANDUID.bind(this)}
+              />
+            )
+        case 4:
+            return (
+              <Monitoring 
+                filterAssessment = { this.state.filterAssessment }
+                ncptData = { ncptData }
+                selectedDomain = { this.state.selectedDomain }
+                updateANDUID={this.updateANDUID.bind(this)}
+              />
+            )
       }
     }
 
@@ -45,11 +76,10 @@ export default class ControlledTabs extends Component {
     this.setState({ 
       selectANDUID: value 
     })
-     console.log("and--------------",this.state.selectANDUID)
-
   }
 
   render() {
+     console.log("and--------------",this.state.selectANDUID)
 
     return (
       
@@ -61,7 +91,7 @@ export default class ControlledTabs extends Component {
         <Tab eventKey={1} title="Assessment" />
         <Tab eventKey={2} title="Diagnosis" />
         <Tab eventKey={3} title="Intervention" />
-        <Tab eventKey={4} title="Monitoring/Evaluation" />
+        <Tab eventKey={4} title="Assessment & Monitoring" />
 
       </Tabs>
         <div>
@@ -74,3 +104,11 @@ export default class ControlledTabs extends Component {
 
 
 
+var patientData = [
+  {id: 1, assessment: {anduid: 1000, value: '1', units: 'g'}},
+  {id: 2, assessment: {anduid: 1001, value: '2.2', units: 'mg'}},
+  {id: 3, assessment: {anduid: 1002, value: '4', units: 'g'}},
+  // {diagnosis: {anduid: 1003, etiology: {intervention: 'gotta fix this!'}}},
+  // {diagnosis: {anduid: 1004, etiology: {intervention: 'almost there!'}}},
+  // {diagnosis: {anduid: 1005, etiology: {intervention: 'looking good!'}}}
+];

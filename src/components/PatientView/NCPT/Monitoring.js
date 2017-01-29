@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import SelectBox from './Common/SelectBox';
 
-export default class Assessment extends Component {
+export default class Monitoring extends Component {
 
 filterUpdate(){
 
 }
 
   render() {
-console.log("assessment", this.props.filterAssessment)
-console.log("assessment data", this.props.ncptData)
+//console.log("assessment", this.props.filterAssessment)
+//console.log("assessment data", this.props.ncptData)
 //console.log("assessment AND", this.props.updateANDUID)
 
     return (

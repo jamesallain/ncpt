@@ -1,5 +1,29 @@
 import { PropTypes } from 'react';
 
+
+const patientNcptProps = {
+  id: PropTypes.string.isRequired,
+  assessment: PropTypes.shape({
+    andiud: PropTypes.string.isRequired, //term
+    value: PropTypes.string.isRequired,
+    units: PropTypes.string.isRequired,
+    standard: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired
+  }).isRequired,
+  diagnosis: PropTypes.shape({
+    andiud: PropTypes.string.isRequired, //problem
+    etiology: PropTypes.shape({intervention: PropTypes.string.isRequired //intervetion
+    }).isRequired,
+    signs:PropTypes.shape({andiud: PropTypes.string.isRequired, //monitoring
+      value: PropTypes.string.isRequired,
+      units: PropTypes.string.isRequired,
+      standard: PropTypes.string.isRequired,
+      source: PropTypes.string.isRequired
+    }).isRequired,
+    status: PropTypes.string.isRequired
+  }).isRequired
+};
+
 const ncptProps = {
   anduid: PropTypes.string.isRequired,
   ncpt_term_w_context: PropTypes.string.isRequired,
