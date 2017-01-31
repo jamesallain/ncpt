@@ -9,7 +9,9 @@ export default class AssessmentTable extends Component {
   //   super()
   //   this.state
   // }
-
+// .th={
+//   "text-align:center"
+// }
 
   render() {
     //console.log(this.props.data)
@@ -21,35 +23,52 @@ export default class AssessmentTable extends Component {
     // let ncptData = this.props.ncptData
     // let selectedDomain = this.props.selectedDomain
     // let updateANDUID = this.props.updateANDUID
-    const { ncptData, filterAssessment, selectedDomain, updateANDUID } = this.props;
+    const { ncptData, filterAssessment, selectedDomain, updateANDUID, standardData } = this.props;
+    
+    const listOfHeaders = this.props.tableHeaders.map(function(header,i){
+      return <th key={i}>
+                {header}
+             </th>
+    })
 
+//console.log(this.state.tableHeaders)
     this.props.patientData.forEach(function(patientData) {
       // if (product.ncptType !== lastncptType) {
       //   rows.push(<ProductncptTypeRow ncptType={product.ncptType} key={product.ncptType} />);
       // }
 
-//rows.push(<AssessmentRow ncpt={ncpt} key={ncpt.assessment.anduid} />);
-        //console.log("filter",this.props.selectedDomain )
-
-      rows.push(<SelectBox
-                  key={patientData.id}
+rows.push(<AssessmentRow 
+             key={patientData.id}
                   filterAssessment = {filterAssessment}
                   ncptData = {ncptData}
                   selectedDomain = {selectedDomain}
                   updateANDUID = {updateANDUID}
-                  patientData = {patientData}
-                />);
+                  patientData = { patientData }
+                  standardData = { standardData }
+            />);
+        //console.log("filter",this.props.selectedDomain )
+
+      // rows.push(<SelectBox
+      //             key={patientData.id}
+      //             filterAssessment = {filterAssessment}
+      //             ncptData = {ncptData}
+      //             selectedDomain = {selectedDomain}
+      //             updateANDUID = {updateANDUID}
+      //             patientData = { patientData }
+      //           />
+
+                
+               // );
       //lastncptType = product.ncptType;
     });
     return (
       <table>
         <thead>
           <tr>
-            <th>units</th>
-            <th>andiud</th>
+            {listOfHeaders}
           </tr>
         </thead>
-        <tbody>{rows}</tbody>
+        {rows}
       </table>
     );
   }

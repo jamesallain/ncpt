@@ -10,15 +10,61 @@ export default class AssessmentRow extends Component {
     //   <span style={{color: 'red'}}>
     //     {this.props.product.name}
     //   </span>;
-    console.log(this.props.ncpt.assessment.value)
+    //console.log(this.props.ncpt.assessment.value)
+    let { ncptData, filterAssessment, selectedDomain, updateANDUID, patientData, standardData } = this.props;
+
+
     return (
-      <tr>
-       <td>{this.props.ncpt.assessment.units}</td>
+      <tbody>
+        <tr>
+          <td>        
+            <SelectBox
+              filterAssessment = {filterAssessment}
+              ncptData = {ncptData}
+              selectedDomain = {selectedDomain}
+              updateANDUID = {updateANDUID}
+              patientData = {patientData}
+            />       
+          </td>
+          
+          <td>        
+            <InputBox
+              filterAssessment = {filterAssessment}
+              ncptData = {ncptData}
+              selectedDomain = {selectedDomain}
+              updateANDUID = {updateANDUID}
+              patientData = {patientData}
+            />       
+          </td>
+        
+          <td>        
+            <SelectBox
+              filterAssessment = {filterAssessment}
+              ncptData = {ncptData}
+              selectedDomain = {selectedDomain}
+              updateANDUID = {updateANDUID}
+              patientData = {patientData}
+            />       
+          </td>
+
+          <td>        
+            <SelectBox
+              filterAssessment = {filterAssessment}
+              ncptData = {ncptData}
+              selectedDomain = {selectedDomain}
+              updateANDUID = {updateANDUID}
+              patientData = {patientData}
+            />       
+          </td>
+
+          
 
       </tr>
+    </tbody>
     );
   }
 }
+      // {this.props.ncpt.assessment.units}
 
         // <SelectBox 
         //   filterAssessment = { this.props.filterAssessment }

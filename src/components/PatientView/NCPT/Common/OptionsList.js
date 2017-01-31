@@ -26,8 +26,7 @@ export default class OptionsList extends Component{
 
       return(
         
-        <tr>   
-          <td> 
+       
             <form>
               <input 
                 list="ncpt" 
@@ -41,8 +40,7 @@ export default class OptionsList extends Component{
                 {options} 
               </datalist>
             </form>
-          </td>
-        </tr>
+          
 
         
       )
