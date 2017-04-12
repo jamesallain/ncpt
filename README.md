@@ -1,6 +1,8 @@
 Intervention Engine Frontend [![Build Status](https://api.travis-ci.org/intervention-engine/frontend-react.svg)](https://travis-ci.org/intervention-engine/frontend-react)
 ========================================================================================================================================================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jamesallain/ncpt.svg)](https://greenkeeper.io/)
+
 The [Intervention Engine](https://github.com/intervention-engine/ie) project provides a web-application for *data-driven team huddles*. Many care teams use team huddles to improve patient outcomes via efficient team communications and a holistic view of patients (due to the interdisciplinary nature of team huddles). Intervention Engine leverages electronic clinical records and clinical risk assessments to assist care teams in selecting patients for their huddles and providing the tools necessary to promote effective discussions and interventions.
 
 Intervention Engine is a work in progress. Current Intervention Engine features:
